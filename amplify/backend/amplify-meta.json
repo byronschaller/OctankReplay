@@ -1,0 +1,106 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-octankreplay-dev-194446-authRole",
+      "UnauthRoleArn": "arn:aws:iam::523702120787:role/amplify-octankreplay-dev-194446-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::523702120787:role/amplify-octankreplay-dev-194446-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-octankreplay-dev-194446-deployment",
+      "UnauthRoleName": "amplify-octankreplay-dev-194446-unauthRole",
+      "StackName": "amplify-octankreplay-dev-194446",
+      "StackId": "arn:aws:cloudformation:us-east-2:523702120787:stack/amplify-octankreplay-dev-194446/45d3dd80-6658-11eb-a73c-022af0bdafd2",
+      "AmplifyAppId": "d9iu2c1cyt1kx"
+    }
+  },
+  "auth": {
+    "octankreplay47d16f9e": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/auth/octankreplay47d16f9e-cloudformation-template.yml",
+        "logicalId": "authoctankreplay47d16f9e"
+      },
+      "lastPushTimeStamp": "2021-02-03T20:09:39.788Z",
+      "output": {
+        "AppClientSecret": "1jqkuutem1r0cog3jlgs9m5buiimr5rsdg4tso8imsc7rqhspg6s",
+        "UserPoolId": "us-east-2_DuhJAuXpZ",
+        "AppClientIDWeb": "2ps2t8a53qvochnc07mfi85o6p",
+        "AppClientID": "57kniaihhmci1gc7bl4uui9t3a",
+        "IdentityPoolId": "us-east-2:a05b8865-798f-47fd-b80e-cf0d80dd340d",
+        "IdentityPoolName": "octankreplay47d16f9e_identitypool_47d16f9e__dev",
+        "UserPoolName": "octankreplay47d16f9e_userpool_47d16f9e"
+      },
+      "lastPushDirHash": "5XOFDg7+wGDy+Pazyxu0QY27les="
+    },
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "octankreplay47d16f9e",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/auth/template.json",
+        "logicalId": "authuserPoolGroups"
+      },
+      "lastPushTimeStamp": "2021-02-03T20:09:39.788Z",
+      "output": {
+        "AdminGroupRole": "arn:aws:iam::523702120787:role/us-east-2_DuhJAuXpZ-AdminGroupRole"
+      },
+      "lastPushDirHash": "SuXbgi/eQ4tFJpfbl153LHXz2GA="
+    }
+  },
+  "api": {
+    "octankreplay": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authoctankreplay47d16f9e"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "dzndyn2mgjccld634opd3qqiey",
+        "GraphQLAPIEndpointOutput": "https://nqn2chwxzfh5pi7rcn2736rf6a.appsync-api.us-east-2.amazonaws.com/graphql"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apioctankreplay"
+      },
+      "lastPushTimeStamp": "2021-02-03T20:09:39.788Z",
+      "lastPushDirHash": "7kaxoRTOpYNZBepXHQVu5eqSQhk="
+    }
+  },
+  "video": {
+    "OctankReplay": {
+      "service": "video",
+      "serviceType": "video-on-demand",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/video/OctankReplay-vod-workflow-template.yaml",
+        "logicalId": "videoOctankReplay"
+      },
+      "lastPushTimeStamp": "2021-02-03T20:09:39.788Z",
+      "output": {
+        "oVodOutputUrl": "octankreplay-dev-output-1uw6y1sl.s3.us-east-2.amazonaws.com",
+        "oVODOutputS3": "octankreplay-dev-output-1uw6y1sl",
+        "oVODInputS3": "octankreplay-dev-input-1uw6y1sl"
+      },
+      "lastPushDirHash": "VLjjfpXyVBu5uIWD3QSDuncn55M="
+    }
+  }
+}

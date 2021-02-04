@@ -1,0 +1,25 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-octankreplay-dev-194446-authRole",
+      "UnauthRoleArn": "arn:aws:iam::523702120787:role/amplify-octankreplay-dev-194446-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::523702120787:role/amplify-octankreplay-dev-194446-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-octankreplay-dev-194446-deployment",
+      "UnauthRoleName": "amplify-octankreplay-dev-194446-unauthRole",
+      "StackName": "amplify-octankreplay-dev-194446",
+      "StackId": "arn:aws:cloudformation:us-east-2:523702120787:stack/amplify-octankreplay-dev-194446/45d3dd80-6658-11eb-a73c-022af0bdafd2",
+      "AmplifyAppId": "d9iu2c1cyt1kx"
+    },
+    "categories": {
+      "auth": {
+        "octankreplay47d16f9e": {}
+      },
+      "video": {
+        "OctankReplay": {
+          "s3UUID": "1uw6y1sl"
+        }
+      }
+    }
+  }
+}

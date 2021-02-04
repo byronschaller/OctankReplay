@@ -1,0 +1,14 @@
+{
+    "CreateAPIKey": 0,
+    "AppSyncApiName": "octankreplay",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authoctankreplay47d16f9e",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-octankreplay-dev-194446-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/99886503f7d224baff1e6f8222ab3d9c401ffe4e"
+}

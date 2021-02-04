@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "octankreplay",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authoctankreplay47d16f9e",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
