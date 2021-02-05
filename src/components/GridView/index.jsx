@@ -56,7 +56,7 @@ this.listenForNewAssets();
 const region = Amplify._config.aws_project_region;
 this.setState({
   sources: [{
-      src: `https://${awsvideo.awsOutputVideo}/${item.video.id}/${item.video.id}.m3u8`,
+      src: `https://d1xncxi4z6qosf.cloudfront.net/${item.video.id}/${item.video.id}.m3u8`,
       type: 'application/x-mpegURL',
     }],
   displayingMovie: true,
