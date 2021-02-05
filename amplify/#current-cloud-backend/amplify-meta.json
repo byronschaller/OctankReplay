@@ -22,7 +22,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/auth/octankreplay47d16f9e-cloudformation-template.yml",
         "logicalId": "authoctankreplay47d16f9e"
       },
-      "lastPushTimeStamp": "2021-02-03T20:09:39.788Z",
+      "lastPushTimeStamp": "2021-02-05T21:12:20.649Z",
       "output": {
         "AppClientSecret": "1jqkuutem1r0cog3jlgs9m5buiimr5rsdg4tso8imsc7rqhspg6s",
         "UserPoolId": "us-east-2_DuhJAuXpZ",
@@ -32,7 +32,7 @@
         "IdentityPoolName": "octankreplay47d16f9e_identitypool_47d16f9e__dev",
         "UserPoolName": "octankreplay47d16f9e_userpool_47d16f9e"
       },
-      "lastPushDirHash": "5XOFDg7+wGDy+Pazyxu0QY27les="
+      "lastPushDirHash": "LcgjNzmVcNTecHS1VmlgJfe558k="
     },
     "userPoolGroups": {
       "service": "Cognito-UserPool-Groups",
@@ -53,7 +53,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/auth/template.json",
         "logicalId": "authuserPoolGroups"
       },
-      "lastPushTimeStamp": "2021-02-03T20:09:39.788Z",
+      "lastPushTimeStamp": "2021-02-05T21:12:20.636Z",
       "output": {
         "AdminGroupRole": "arn:aws:iam::523702120787:role/us-east-2_DuhJAuXpZ-AdminGroupRole"
       },
@@ -81,8 +81,8 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apioctankreplay"
       },
-      "lastPushTimeStamp": "2021-02-03T20:09:39.788Z",
-      "lastPushDirHash": "7kaxoRTOpYNZBepXHQVu5eqSQhk="
+      "lastPushTimeStamp": "2021-02-05T21:12:20.649Z",
+      "lastPushDirHash": "UyRzFKtuAg6yMJol3idq4s7Hgq0="
     }
   },
   "video": {
@@ -94,13 +94,30 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/video/OctankReplay-vod-workflow-template.yaml",
         "logicalId": "videoOctankReplay"
       },
-      "lastPushTimeStamp": "2021-02-03T20:09:39.788Z",
+      "lastPushTimeStamp": "2021-02-05T21:12:20.640Z",
       "output": {
         "oVodOutputUrl": "octankreplay-dev-output-1uw6y1sl.s3.us-east-2.amazonaws.com",
         "oVODOutputS3": "octankreplay-dev-output-1uw6y1sl",
         "oVODInputS3": "octankreplay-dev-input-1uw6y1sl"
       },
       "lastPushDirHash": "VLjjfpXyVBu5uIWD3QSDuncn55M="
+    }
+  },
+  "analytics": {
+    "octankreplay": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+        "logicalId": "analyticsoctankreplay"
+      },
+      "lastPushTimeStamp": "2021-02-05T21:12:20.649Z",
+      "output": {
+        "appName": "octankreplay-dev",
+        "Region": "us-east-1",
+        "Id": "6156e7dbe7c3425eb9fd1312de66057b"
+      },
+      "lastPushDirHash": "G/o+tw1GYiVg7+0sgwvadTmXz58="
     }
   }
 }

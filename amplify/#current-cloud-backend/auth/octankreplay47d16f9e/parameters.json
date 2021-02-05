@@ -1,6 +1,6 @@
 {
     "identityPoolName": "octankreplay47d16f9e_identitypool_47d16f9e",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "octank47d16f9e",
     "userPoolName": "octankreplay47d16f9e_userpool_47d16f9e",
     "autoVerifiedAttributes": [

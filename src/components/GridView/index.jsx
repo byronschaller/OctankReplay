@@ -8,7 +8,7 @@ import VideoPlayer from '../VideoPlayer';
 import GridCardView from '../GridCardView';
 import 'video.js/dist/video-js.css';
 // Insert Location 9
-import Amplify, { API, graphqlOperation } from 'aws-amplify';
+import Amplify, { API, graphqlOperation, Analytics } from 'aws-amplify';
 import * as queries from '../../graphql/queries';
 // Insert Location 12
 import awsvideo from '../../aws-video-exports';
@@ -50,6 +50,10 @@ this.listenForNewAssets();
   }
 
   displayMovie = (item) => {
+    Analytics.record({
+    name: 'movieClick', 
+    attributes: { id: item.video.id }
+  });
     // Insert Location 13
 // Location 13
 // eslint-disable-next-line no-underscore-dangle

@@ -1,0 +1,21 @@
+{
+    "appName": "octankreplay",
+    "roleName": "pinpointLambdaRole86a567e1",
+    "cloudformationPolicyName": "cloudformationPolicy86a567e1",
+    "cloudWatchPolicyName": "cloudWatchPolicy86a567e1",
+    "pinpointPolicyName": "pinpointPolicy86a567e1",
+    "authPolicyName": "pinpoint_amplify_86a567e1",
+    "unauthPolicyName": "pinpoint_amplify_86a567e1",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

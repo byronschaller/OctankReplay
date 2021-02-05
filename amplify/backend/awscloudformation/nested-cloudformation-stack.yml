@@ -74,7 +74,7 @@
         "TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/auth/octankreplay47d16f9e-cloudformation-template.yml",
         "Parameters": {
           "identityPoolName": "octankreplay47d16f9e_identitypool_47d16f9e",
-          "allowUnauthenticatedIdentities": false,
+          "allowUnauthenticatedIdentities": true,
           "resourceNameTruncated": "octank47d16f9e",
           "userPoolName": "octankreplay47d16f9e_userpool_47d16f9e",
           "autoVerifiedAttributes": "email",
@@ -205,6 +205,34 @@
             ]
           },
           "s3UUID": "1uw6y1sl",
+          "env": "dev"
+        }
+      }
+    },
+    "analyticsoctankreplay": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+        "Parameters": {
+          "appName": "octankreplay",
+          "roleName": "pinpointLambdaRole86a567e1",
+          "cloudformationPolicyName": "cloudformationPolicy86a567e1",
+          "cloudWatchPolicyName": "cloudWatchPolicy86a567e1",
+          "pinpointPolicyName": "pinpointPolicy86a567e1",
+          "authPolicyName": "pinpoint_amplify_86a567e1",
+          "unauthPolicyName": "pinpoint_amplify_86a567e1",
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "authRoleArn": {
+            "Fn::GetAtt": [
+              "AuthRole",
+              "Arn"
+            ]
+          },
           "env": "dev"
         }
       }
