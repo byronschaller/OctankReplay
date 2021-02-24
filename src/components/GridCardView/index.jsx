@@ -11,6 +11,7 @@ const GridCardView = (props) => {
         <img src={logo} alt="Movie" />
         {title}
         {details}
+        <button type="button">"Vote!"</button>
       </div>
     </div>
   );
