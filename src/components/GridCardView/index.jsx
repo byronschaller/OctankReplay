@@ -10,7 +10,7 @@ const GridCardView = (props) => {
       <div className="container">
         <img src={logo} alt="Movie" />
         {title}
-        <p>{details}</p>
+        {details}
       </div>
     </div>
   );
