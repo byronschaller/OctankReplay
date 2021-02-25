@@ -9,7 +9,7 @@ const GridCardView = (props) => {
   return (
     <div className="card">
       <div className="container">
-        <img src= {`https://d1xncxi4z6qosf.cloudfront.net/${item.video.id}/${item.video.id}.0000000.jpg`} alt="Movie" />
+        <img src= {`https://d1xncxi4z6qosf.cloudfront.net/${id}/${id}.0000000.jpg`} alt="Movie" />
         {//<img src={logo} alt="Movie" />
         }
         {title}
