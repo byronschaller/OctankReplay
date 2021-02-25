@@ -24,6 +24,7 @@ GridCardView.propTypes = {
   item: PropTypes.shape({
     title: PropTypes.string,
     details: PropTypes.string,
+    id: PropTypes.string,
   }),
 };
 
