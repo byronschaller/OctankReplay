@@ -94,3 +94,30 @@ export const deleteVideoObject = /* GraphQL */ `
     }
   }
 `;
+export const addReplay = /* GraphQL */ `
+  mutation AddReplay($replayID: String!, $votesYes: Int, $votesNo: Int) {
+    addReplay(replayID: $replayID, votesYes: $votesYes, votesNo: $votesNo) {
+      replayID
+      votesYes
+      votesNo
+    }
+  }
+`;
+export const upvoteReplay = /* GraphQL */ `
+  mutation UpvoteReplay($replayID: String!) {
+    upvoteReplay(replayID: $replayID) {
+      replayID
+      votesYes
+      votesNo
+    }
+  }
+`;
+export const downvoteReplay = /* GraphQL */ `
+  mutation DownvoteReplay($replayID: String!) {
+    downvoteReplay(replayID: $replayID) {
+      replayID
+      votesYes
+      votesNo
+    }
+  }
+`;

@@ -65,3 +65,12 @@ export const listVideoObjects = /* GraphQL */ `
     }
   }
 `;
+export const getReplay = /* GraphQL */ `
+  query GetReplay($replayID: String) {
+    getReplay(replayID: $replayID) {
+      replayID
+      votesYes
+      votesNo
+    }
+  }
+`;

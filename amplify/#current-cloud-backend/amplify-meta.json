@@ -22,7 +22,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/auth/octankreplay47d16f9e-cloudformation-template.yml",
         "logicalId": "authoctankreplay47d16f9e"
       },
-      "lastPushTimeStamp": "2021-02-05T21:12:20.649Z",
+      "lastPushTimeStamp": "2021-03-02T21:23:01.587Z",
       "output": {
         "AppClientSecret": "1jqkuutem1r0cog3jlgs9m5buiimr5rsdg4tso8imsc7rqhspg6s",
         "UserPoolId": "us-east-2_DuhJAuXpZ",
@@ -53,7 +53,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/auth/template.json",
         "logicalId": "authuserPoolGroups"
       },
-      "lastPushTimeStamp": "2021-02-05T21:12:20.636Z",
+      "lastPushTimeStamp": "2021-03-02T21:23:01.590Z",
       "output": {
         "AdminGroupRole": "arn:aws:iam::523702120787:role/us-east-2_DuhJAuXpZ-AdminGroupRole"
       },
@@ -81,8 +81,8 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apioctankreplay"
       },
-      "lastPushTimeStamp": "2021-02-05T21:12:20.649Z",
-      "lastPushDirHash": "UyRzFKtuAg6yMJol3idq4s7Hgq0="
+      "lastPushTimeStamp": "2021-03-02T21:23:02.850Z",
+      "lastPushDirHash": "Am9PE9bE1BS0FSaXDJyH4biWrms="
     }
   },
   "video": {
@@ -94,7 +94,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/video/OctankReplay-vod-workflow-template.yaml",
         "logicalId": "videoOctankReplay"
       },
-      "lastPushTimeStamp": "2021-02-05T21:12:20.640Z",
+      "lastPushTimeStamp": "2021-03-02T21:23:01.614Z",
       "output": {
         "oVodOutputUrl": "octankreplay-dev-output-1uw6y1sl.s3.us-east-2.amazonaws.com",
         "oVODOutputS3": "octankreplay-dev-output-1uw6y1sl",
@@ -111,7 +111,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-octankreplay-dev-194446-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
         "logicalId": "analyticsoctankreplay"
       },
-      "lastPushTimeStamp": "2021-02-05T21:12:20.649Z",
+      "lastPushTimeStamp": "2021-03-02T21:23:01.616Z",
       "output": {
         "appName": "octankreplay-dev",
         "Region": "us-east-1",

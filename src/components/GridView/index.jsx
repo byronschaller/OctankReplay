@@ -125,7 +125,8 @@ if (nextToken !== '' && nextToken !== null && nextToken !== undefined) {
     const itemHTML = items.map((item) => (
       <Col xs={6} sm={4} lg={3.5} style={{ paddingTop: 15, paddingBottom: 15 }} key={item.id}>
         <button type="button" onClick={(e) => this.displayMovie(item, e)} aria-label={item.title}><GridCardView item={item} id={item.video.id} title={item.title} details={item.description}/></button>
-        <button type="button">{item.description}</button> 
+        <button type="button">"thumbsup"</button>
+        <button type="button">"thumbsdown"</button>
       </Col>
     ));
 
