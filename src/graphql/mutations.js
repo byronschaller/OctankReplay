@@ -95,8 +95,8 @@ export const deleteVideoObject = /* GraphQL */ `
   }
 `;
 export const addReplay = /* GraphQL */ `
-  mutation AddReplay($replayID: String!, $votesYes: Int, $votesNo: Int) {
-    addReplay(replayID: $replayID, votesYes: $votesYes, votesNo: $votesNo) {
+  mutation AddReplay($replayID: String!) {
+    addReplay(replayID: $replayID) {
       replayID
       votesYes
       votesNo

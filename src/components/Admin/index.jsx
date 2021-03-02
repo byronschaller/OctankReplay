@@ -12,7 +12,7 @@ import Amplify, {
   Auth, API, graphqlOperation, Storage,
 } from 'aws-amplify';
 import awsvideoconfig from '../../aws-video-exports';
-import { createVodAsset, createVideoObject } from '../../graphql/mutations';
+import { createVodAsset, createVideoObject, addReplay } from '../../graphql/mutations';
 
 class Admin extends React.Component {
   constructor(props) {
@@ -79,6 +79,7 @@ const videoObject = {
   },
 };
 
+API.graphql(graphqlOperation(addReplay, uuid));
 API.graphql(graphqlOperation(createVideoObject, videoObject)).then((response, error) => {
   if (error === undefined) {
     const {
