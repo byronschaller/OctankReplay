@@ -65,12 +65,28 @@ export const listVideoObjects = /* GraphQL */ `
     }
   }
 `;
-export const getReplay = /* GraphQL */ `
-  query GetReplay($replayID: String) {
-    getReplay(replayID: $replayID) {
+export const getReplayVote = /* GraphQL */ `
+  query GetReplayVote($replayID: String!) {
+    getReplayVote(replayID: $replayID) {
       replayID
-      votesYes
       votesNo
+      votesYes
+    }
+  }
+`;
+export const listReplayVotes = /* GraphQL */ `
+  query ListReplayVotes(
+    $filter: TableReplayVoteFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listReplayVotes(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        replayID
+        votesNo
+        votesYes
+      }
+      nextToken
     }
   }
 `;

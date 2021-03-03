@@ -76,3 +76,54 @@ export const onDeleteVideoObject = /* GraphQL */ `
     }
   }
 `;
+export const onCreateReplayVote = /* GraphQL */ `
+  subscription OnCreateReplayVote(
+    $replayID: String
+    $votesNo: Int
+    $votesYes: Int
+  ) {
+    onCreateReplayVote(
+      replayID: $replayID
+      votesNo: $votesNo
+      votesYes: $votesYes
+    ) {
+      replayID
+      votesNo
+      votesYes
+    }
+  }
+`;
+export const onUpdateReplayVote = /* GraphQL */ `
+  subscription OnUpdateReplayVote(
+    $replayID: String
+    $votesNo: Int
+    $votesYes: Int
+  ) {
+    onUpdateReplayVote(
+      replayID: $replayID
+      votesNo: $votesNo
+      votesYes: $votesYes
+    ) {
+      replayID
+      votesNo
+      votesYes
+    }
+  }
+`;
+export const onDeleteReplayVote = /* GraphQL */ `
+  subscription OnDeleteReplayVote(
+    $replayID: String
+    $votesNo: Int
+    $votesYes: Int
+  ) {
+    onDeleteReplayVote(
+      replayID: $replayID
+      votesNo: $votesNo
+      votesYes: $votesYes
+    ) {
+      replayID
+      votesNo
+      votesYes
+    }
+  }
+`;

@@ -12,7 +12,7 @@ import Amplify, {
   Auth, API, graphqlOperation, Storage,
 } from 'aws-amplify';
 import awsvideoconfig from '../../aws-video-exports';
-import { createVodAsset, createVideoObject, addReplay } from '../../graphql/mutations';
+import { createVodAsset, createVideoObject, createReplayVote } from '../../graphql/mutations';
 
 class Admin extends React.Component {
   constructor(props) {
@@ -79,7 +79,14 @@ const videoObject = {
   },
 };
 
-API.graphql(graphqlOperation(addReplay, uuid));
+const replayID = {
+  input: {
+    replayID: uuid,
+    votesNo: 0,
+    votesYes: 0,
+ },
+};
+
 API.graphql(graphqlOperation(createVideoObject, videoObject)).then((response, error) => {
   if (error === undefined) {
     const {
@@ -93,6 +100,7 @@ API.graphql(graphqlOperation(createVideoObject, videoObject)).then((response, er
         vodAssetVideoId: uuid,
       },
     };
+    API.graphql(graphqlOperation(createReplayVote, replayID));
     API.graphql(graphqlOperation(createVodAsset, videoAsset));
     Storage.put(`${uuid}.${fileExtension[fileExtension.length - 1]}`, file, {
       progressCallback(progress) {

@@ -94,12 +94,30 @@ export const deleteVideoObject = /* GraphQL */ `
     }
   }
 `;
-export const addReplay = /* GraphQL */ `
-  mutation AddReplay($replayID: String!) {
-    addReplay(replayID: $replayID) {
+export const createReplayVote = /* GraphQL */ `
+  mutation CreateReplayVote($input: CreateReplayVoteInput!) {
+    createReplayVote(input: $input) {
       replayID
-      votesYes
       votesNo
+      votesYes
+    }
+  }
+`;
+export const updateReplayVote = /* GraphQL */ `
+  mutation UpdateReplayVote($input: UpdateReplayVoteInput!) {
+    updateReplayVote(input: $input) {
+      replayID
+      votesNo
+      votesYes
+    }
+  }
+`;
+export const deleteReplayVote = /* GraphQL */ `
+  mutation DeleteReplayVote($input: DeleteReplayVoteInput!) {
+    deleteReplayVote(input: $input) {
+      replayID
+      votesNo
+      votesYes
     }
   }
 `;
@@ -107,8 +125,8 @@ export const upvoteReplay = /* GraphQL */ `
   mutation UpvoteReplay($replayID: String!) {
     upvoteReplay(replayID: $replayID) {
       replayID
-      votesYes
       votesNo
+      votesYes
     }
   }
 `;
@@ -116,8 +134,8 @@ export const downvoteReplay = /* GraphQL */ `
   mutation DownvoteReplay($replayID: String!) {
     downvoteReplay(replayID: $replayID) {
       replayID
-      votesYes
       votesNo
+      votesYes
     }
   }
 `;
