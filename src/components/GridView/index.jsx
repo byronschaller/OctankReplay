@@ -16,6 +16,8 @@ import awsvideo from '../../aws-video-exports';
 
 // Insert Location 14
 import { onCreateVodAsset } from '../../graphql/subscriptions';
+import up from '../App/up.png'
+import down from '../App/down.png'
 
 class GridView extends Component {
   constructor(props) {
@@ -139,9 +141,11 @@ if (nextToken !== '' && nextToken !== null && nextToken !== undefined) {
     const { items } = this.state;
     const itemHTML = items.map((item) => (
       <Col xs={6} sm={4} lg={3.5} style={{ paddingTop: 15, paddingBottom: 15 }} key={item.id}>
-        <button type="button" onClick={(e) => this.displayMovie(item, e)} aria-label={item.title}><GridCardView item={item} id={item.video.id} title={item.title} details={item.description}/></button>
-        <button type="button" onClick={(e) => this.upVote(item, e)}>"thumbsup"</button>
-        <button type="button" onClick={(e) => this.downVote(item, e)}>"thumbsdown"</button>
+        <button button1 type="button" onClick={(e) => this.displayMovie(item, e)} aria-label={item.title}><GridCardView item={item} id={item.video.id} title={item.title} details={item.description}/></button>
+        <div>
+        <button button2 type="button" onClick={(e) => this.upVote(item, e)}><img src={up} height={50} width={50}/></button>
+        <button button2 type="button" onClick={(e) => this.downVote(item, e)}><img src={down} height={50} width={50}/></button>
+        </div>
       </Col>
     ));
 
