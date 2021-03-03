@@ -10,6 +10,7 @@ import 'video.js/dist/video-js.css';
 // Insert Location 9
 import Amplify, { API, graphqlOperation, Analytics } from 'aws-amplify';
 import * as queries from '../../graphql/queries';
+import * as mutations from '../../graphql/mutations';
 // Insert Location 12
 import awsvideo from '../../aws-video-exports';
 
@@ -66,6 +67,20 @@ this.setState({
   displayingMovie: true,
   choosenItem: item,
 });
+  }
+  
+  upVote = (item) => {
+    const replayID = {
+         replayID: item.video.id,
+    };
+    API.graphql(graphqlOperation(mutations.upvoteReplay, replayID));
+  }
+  
+  downVote = (item) => {
+    const replayID = {
+         replayID: item.video.id,
+    };
+    API.graphql(graphqlOperation(mutations.downvoteReplay, replayID));
   }
 
   overlayMovie = () => {
@@ -125,8 +140,8 @@ if (nextToken !== '' && nextToken !== null && nextToken !== undefined) {
     const itemHTML = items.map((item) => (
       <Col xs={6} sm={4} lg={3.5} style={{ paddingTop: 15, paddingBottom: 15 }} key={item.id}>
         <button type="button" onClick={(e) => this.displayMovie(item, e)} aria-label={item.title}><GridCardView item={item} id={item.video.id} title={item.title} details={item.description}/></button>
-        <button type="button">"thumbsup"</button>
-        <button type="button">"thumbsdown"</button>
+        <button type="button" onClick={(e) => this.upVote(item, e)}>"thumbsup"</button>
+        <button type="button" onClick={(e) => this.downVote(item, e)}>"thumbsdown"</button>
       </Col>
     ));
 
